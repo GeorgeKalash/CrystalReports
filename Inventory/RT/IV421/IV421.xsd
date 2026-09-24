@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IV421" nillable="true" type="IV421" />
+  <xs:complexType name="IV421">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="itemId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="siteId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="categoryName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="categoryRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="groupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="groupRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="designRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="designName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="siteName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="siteRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="serialNo" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="weight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="sizeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sizeRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="totalWeight" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pcs" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="statusName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="productionLineName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="productionLineRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="collection" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="stone" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="productionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="trxDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="daysSinceProduction" nillable="true" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="daysSinceEnteredSite" nillable="true" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="nonMetalWeight" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
