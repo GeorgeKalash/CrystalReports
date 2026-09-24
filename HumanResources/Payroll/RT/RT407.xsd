@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RT407" nillable="true" type="RT407" />
+  <xs:complexType name="RT407">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="employeeRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="employeeName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="salaryType" nillable="true" type="SalaryType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="salaryTypeName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="basicSalary" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currencyRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currencyName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="entitlement" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="deduction" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="netSalary" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SalaryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DAILY" />
+      <xs:enumeration value="WEEKLY" />
+      <xs:enumeration value="BI_WEEKLY" />
+      <xs:enumeration value="FOUR_WEEKLY" />
+      <xs:enumeration value="MONTHLY" />
+      <xs:enumeration value="HOURLY" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -3,8 +3,12 @@
     "",
     "\\BrokerageTrading",
     "\\BrokerageTrading\\PT",
-    "\\BrokerageTrading\\PT\\BT101P"
+    "\\BrokerageTrading\\PT\\BT101P",
+    "\\BrokerageTrading\\PT\\BT101S",
+    "\\HumanResources",
+    "\\HumanResources\\Payroll",
+    "\\HumanResources\\Payroll\\RT"
   ],
-  "SelectedNode": "\\BrokerageTrading\\PT",
+  "SelectedNode": "\\HumanResources\\Payroll\\RT\\RT407.rpt",
   "PreviewInSolutionExplorer": false
 }
