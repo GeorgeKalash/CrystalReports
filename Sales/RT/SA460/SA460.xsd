@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SA460" nillable="true" type="SA460" />
+  <xs:complexType name="SA460">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="items" type="ArrayOfSA460a" />
+      <xs:element minOccurs="0" maxOccurs="1" name="summary" type="ArrayOfSA460a" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSA460a">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SA460a" nillable="true" type="SA460a" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SA460a">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="recordId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dtName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="clientRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="clientName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="contactRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="contactName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="spRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="date" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="reference" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="description" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="metalId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="metalRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="qty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="currencyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="currencyRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pieces" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="subtotal" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="laborPrice" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="vatAmount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="discountAmount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="netAmount" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="tdPct" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plantRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plantName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="plantGroupRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ccRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cogs" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="grossProfit" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="statusName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

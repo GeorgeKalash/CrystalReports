@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BrokerageTrading",
-    "\\BrokerageTrading\\PT",
-    "\\BrokerageTrading\\PT\\BT101P"
+    "\\Sales",
+    "\\Sales\\RT",
+    "\\Sales\\RT\\SA460"
   ],
-  "SelectedNode": "\\BrokerageTrading\\PT",
   "PreviewInSolutionExplorer": false
 }
