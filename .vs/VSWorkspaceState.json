@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BrokerageTrading",
-    "\\BrokerageTrading\\PT\\BT101P",
-    "\\BrokerageTrading\\PT\\BT101S",
-    "\\HumanResources\\Payroll",
-    "\\HumanResources\\Payroll\\RT"
+    "\\Inventory\\RT"
   ],
-  "SelectedNode": "\\BrokerageTrading\\PT",
   "PreviewInSolutionExplorer": false
 }
