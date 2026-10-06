@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SA461" nillable="true" type="SA461" />
+  <xs:complexType name="SA461">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="soQty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="minQty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="onHand" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
