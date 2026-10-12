@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MF114" nillable="true" type="MF114" />
+  <xs:complexType name="MF114">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="header" type="MF114a" />
+      <xs:element minOccurs="0" maxOccurs="1" name="items" type="ArrayOfMF114b" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MF114a">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProductionRequestView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProductionRequestView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProductionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="plantGroupRef" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="plantGroupName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="periodName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="spRef" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="spName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="dtName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="statusName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="typeName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="metalRef" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProductionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Activity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="plantGroupId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="fiscalYear" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="periodId" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="notes" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="spId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="summaryId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="type" type="xs:short" />
+          <xs:element minOccurs="1" maxOccurs="1" name="metalId" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="qty" type="xs:decimal" />
+          <xs:element minOccurs="1" maxOccurs="1" name="pcs" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Activity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Identity">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="dtId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="batchId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="reference" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="status" type="DocumentStatus" />
+          <xs:element minOccurs="1" maxOccurs="1" name="releaseStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="date" type="xs:dateTime" />
+          <xs:element minOccurs="1" maxOccurs="1" name="isVerified" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Identity">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="recordId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DocumentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNIDENTIFIED" />
+      <xs:enumeration value="DRAFT" />
+      <xs:enumeration value="XXXXXXXXX" />
+      <xs:enumeration value="PROCESSED" />
+      <xs:enumeration value="RELEASED" />
+      <xs:enumeration value="CANCELLED" />
+      <xs:enumeration value="ON_HOLD" />
+      <xs:enumeration value="REJECTED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfMF114b">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MF114b" nillable="true" type="MF114b" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MF114b">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="itemGroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemGroupName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="onHand" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="qty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pcs" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="sts_qty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="lts_qty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="budgetQty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="totalDiff" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
