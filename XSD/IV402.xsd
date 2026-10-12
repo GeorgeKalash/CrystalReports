@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="StockCard" nillable="true" type="StockCard" />
+  <xs:complexType name="StockCard">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="itemId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="lineType" type="StockCardLineType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="siteId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="date" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="flName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="siteRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="siteName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="functionId" type="SystemFunction" />
+      <xs:element minOccurs="0" maxOccurs="1" name="functionName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="recordId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="seqNo" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="rowId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="documentRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="notes" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="extraInfo" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="qty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pieces" nillable="true" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="runningQty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="runningPieces" nillable="true" type="xs:short" />
+      <xs:element minOccurs="1" maxOccurs="1" name="costCenterId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="costCenterRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="costCenterName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="cost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="curentCost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="runningCost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="standardWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="currentItemWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="runningItemWeight" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="StockCardLineType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="opening" />
+      <xs:enumeration value="previous_period" />
+      <xs:enumeration value="transaction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SystemFunction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BalanceFromPrevioudPeriod" />
+      <xs:enumeration value="UserCellPhoneVerification" />
+      <xs:enumeration value="UserEmailVerification" />
+      <xs:enumeration value="JournalVoucher" />
+      <xs:enumeration value="PriceListUpdate" />
+      <xs:enumeration value="MaterialAdjustment" />
+      <xs:enumeration value="MaterialTransfer" />
+      <xs:enumeration value="StockCount" />
+      <xs:enumeration value="AdjustItemCost" />
+      <xs:enumeration value="DraftTransfer" />
+      <xs:enumeration value="MetalReceiptVoucher" />
+      <xs:enumeration value="PaymentVoucher" />
+      <xs:enumeration value="ReceiptVoucher" />
+      <xs:enumeration value="CreditNote" />
+      <xs:enumeration value="DebitNote" />
+      <xs:enumeration value="ServiceBill" />
+      <xs:enumeration value="ServiceInvoice" />
+      <xs:enumeration value="MetalPaymentVoucher" />
+      <xs:enumeration value="BalanceTransfer" />
+      <xs:enumeration value="BalanceTransferPurchase" />
+      <xs:enumeration value="BalanceTransferSale" />
+      <xs:enumeration value="PaymentOrder" />
+      <xs:enumeration value="BalanceTransferMultiAccount" />
+      <xs:enumeration value="CreditLimitHold" />
+      <xs:enumeration value="AssetTransfer" />
+      <xs:enumeration value="Depreciation" />
+      <xs:enumeration value="CashIncrease" />
+      <xs:enumeration value="CashDecrease" />
+      <xs:enumeration value="CashTransfer" />
+      <xs:enumeration value="RecurringEntry" />
+      <xs:enumeration value="Assembly" />
+      <xs:enumeration value="ProductionOrder" />
+      <xs:enumeration value="JobOrder" />
+      <xs:enumeration value="Worksheet" />
+      <xs:enumeration value="IssueOfMaterial" />
+      <xs:enumeration value="JobTransfer" />
+      <xs:enumeration value="ProductionPlan" />
+      <xs:enumeration value="MaterialPlan" />
+      <xs:enumeration value="Damage" />
+      <xs:enumeration value="WorkCenterConsumption" />
+      <xs:enumeration value="Disassembly" />
+      <xs:enumeration value="ProductionQueue" />
+      <xs:enumeration value="ProductionSheet" />
+      <xs:enumeration value="DamageReturn" />
+      <xs:enumeration value="JobOrderWizard" />
+      <xs:enumeration value="BatchWorksheet" />
+      <xs:enumeration value="BatchTransfer" />
+      <xs:enumeration value="ItemDisposal" />
+      <xs:enumeration value="StandardCost" />
+      <xs:enumeration value="ProductionRequest" />
+      <xs:enumeration value="ProductionSummary" />
+      <xs:enumeration value="Sketch" />
+      <xs:enumeration value="ThreeDDesign" />
+      <xs:enumeration value="ThreeDPrint" />
+      <xs:enumeration value="ProductModelingCasting" />
+      <xs:enumeration value="Modeling" />
+      <xs:enumeration value="Rubber" />
+      <xs:enumeration value="Sample" />
+      <xs:enumeration value="PurchaseRequisition" />
+      <xs:enumeration value="PurchaseQuotation" />
+      <xs:enumeration value="PurchaseOrder" />
+      <xs:enumeration value="Shipment" />
+      <xs:enumeration value="PurchaseInvoice" />
+      <xs:enumeration value="PurchaseReturn" />
+      <xs:enumeration value="PurchaseGOCIn" />
+      <xs:enumeration value="PurchaseGOCOut" />
+      <xs:enumeration value="ShipmentReturn" />
+      <xs:enumeration value="DraftPurchaseReturn" />
+      <xs:enumeration value="SalesQuotation" />
+      <xs:enumeration value="SalesOrder" />
+      <xs:enumeration value="SalesInvoice" />
+      <xs:enumeration value="SalesReturn" />
+      <xs:enumeration value="SubsequentSalesDebit" />
+      <xs:enumeration value="SubsequentSalesCredit" />
+      <xs:enumeration value="ConsignmentOut" />
+      <xs:enumeration value="ConsignmentIn" />
+      <xs:enumeration value="DraftInvoice" />
+      <xs:enumeration value="DraftInvoiceReturn" />
+      <xs:enumeration value="DeliveryOrder" />
+      <xs:enumeration value="DeliveryReturn" />
+      <xs:enumeration value="DeliveryTrip" />
+      <xs:enumeration value="DeliveryExpense" />
+      <xs:enumeration value="Inbound" />
+      <xs:enumeration value="CostAllocation" />
+      <xs:enumeration value="RetailInvoice" />
+      <xs:enumeration value="RetailReturn" />
+      <xs:enumeration value="RetailPurchase" />
+      <xs:enumeration value="RetailPurchaseReturn" />
+      <xs:enumeration value="RepairRequest" />
+      <xs:enumeration value="WorkOrder" />
+      <xs:enumeration value="Wax" />
+      <xs:enumeration value="Casting" />
+      <xs:enumeration value="MeltingRequest" />
+      <xs:enumeration value="Melting" />
+      <xs:enumeration value="LabTest" />
+      <xs:enumeration value="Smelting" />
+      <xs:enumeration value="PurityAdjustment" />
+      <xs:enumeration value="Calibration" />
+      <xs:enumeration value="Cutting" />
+      <xs:enumeration value="MaterialRequest" />
+      <xs:enumeration value="MRP" />
+      <xs:enumeration value="Replenishment" />
+      <xs:enumeration value="LeaveRequest" />
+      <xs:enumeration value="ReturnFromLeave" />
+      <xs:enumeration value="EarnedLeave" />
+      <xs:enumeration value="BalanceAdjustment" />
+      <xs:enumeration value="LeavePayment" />
+      <xs:enumeration value="LoanRequest" />
+      <xs:enumeration value="TimeVariation" />
+      <xs:enumeration value="DuringShiftLeave" />
+      <xs:enumeration value="ResignationRequest" />
+      <xs:enumeration value="LetterRequest" />
+      <xs:enumeration value="EmployeePenalty" />
+      <xs:enumeration value="JobInfo" />
+      <xs:enumeration value="Payroll" />
+      <xs:enumeration value="ClientRelationship" />
+      <xs:enumeration value="CurrencyPurchase" />
+      <xs:enumeration value="CurrencySale" />
+      <xs:enumeration value="CurrencyCreditOrderPurchase" />
+      <xs:enumeration value="CurrencyCreditOrderSale" />
+      <xs:enumeration value="CreditInvoicePurchase" />
+      <xs:enumeration value="CreditInvoiceSales" />
+      <xs:enumeration value="KYC" />
+      <xs:enumeration value="ClientRelation" />
+      <xs:enumeration value="OutwardOrder" />
+      <xs:enumeration value="InwardTransfer" />
+      <xs:enumeration value="OutwardTransferModification" />
+      <xs:enumeration value="InwardTransferPayment" />
+      <xs:enumeration value="OutwardReturn" />
+      <xs:enumeration value="RemittanceReceiptVoucher" />
+      <xs:enumeration value="OutwardTransfer" />
+      <xs:enumeration value="OutwardReturnSettlement" />
+      <xs:enumeration value="CashCount" />
+      <xs:enumeration value="FixingSales" />
+      <xs:enumeration value="FixingPurchases" />
+      <xs:enumeration value="EventOrder" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
