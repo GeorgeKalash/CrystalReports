@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IV450a" nillable="true" type="IV450a" />
+  <xs:complexType name="IV450a">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="headerId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="reference" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemCategoryId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemGroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemGroupName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemCategoryName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="productionLineName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="collection" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="dtId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dtRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dtName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="date" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="fromSiteId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fromSiteRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fromSiteName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="toSiteId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="toSiteRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="toSiteName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="fromSiteGroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fromSiteGroupRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="fromSiteGroupName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="toSiteGroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="toSiteGroupRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="toSiteGroupName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="metalId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="metalRef" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="baseMetalG21" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pcs" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="qty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="unitCost" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="totalCost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="status" type="xs:short" />
+      <xs:element minOccurs="0" maxOccurs="1" name="statusName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
