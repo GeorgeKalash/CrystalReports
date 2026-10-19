@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Inventory\\RT"
+    "\\Reports",
+    "\\Reports\\Inventory",
+    "\\Reports\\Inventory\\CT",
+    "\\XSD"
   ],
+  "SelectedNode": "\\Reports\\Inventory\\CT\\IV402.rpt",
   "PreviewInSolutionExplorer": false
 }
