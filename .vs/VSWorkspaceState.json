@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Reports",
-    "\\Reports\\Inventory",
-    "\\Reports\\Inventory\\CT",
-    "\\XSD"
+    "\\Reports\\Custom",
+    "\\Reports\\Custom\\1029",
+    "\\Reports\\Custom\\1029\\IV",
+    "\\Reports\\HR\\PR"
   ],
-  "SelectedNode": "\\Reports\\Inventory\\CT\\IV402.rpt",
+  "SelectedNode": "\\Reports\\Custom\\1029\\IV\\IV450.rpt",
   "PreviewInSolutionExplorer": false
 }
