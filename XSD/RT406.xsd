@@ -11,6 +11,8 @@
       <xs:element minOccurs="0" maxOccurs="1" name="positionName" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="branchRef" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="branchName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="lsRef" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="lsName" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="previousBalance" type="xs:decimal" />
       <xs:element minOccurs="1" maxOccurs="1" name="earned" type="xs:decimal" />
       <xs:element minOccurs="1" maxOccurs="1" name="used" type="xs:decimal" />
