@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MF115" nillable="true" type="MF115" />
+  <xs:complexType name="MF115">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="items" type="ArrayOfMF115a" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfMF115a">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MF115a" nillable="true" type="MF115a" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MF115a">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProductionSummaryItemView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProductionSummaryItemView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProductionSummaryItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="clientRef" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="clientName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ProductionSummaryItem">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="rsId" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="seqNo" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="itemName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="qty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="onhand" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="itemWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="pcs" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="clientId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
