@@ -22,6 +22,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1" name="clientRef" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="clientName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="brandName" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -38,6 +39,8 @@
       <xs:element minOccurs="1" maxOccurs="1" name="itemWeight" nillable="true" type="xs:decimal" />
       <xs:element minOccurs="1" maxOccurs="1" name="pcs" nillable="true" type="xs:int" />
       <xs:element minOccurs="1" maxOccurs="1" name="clientId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="sts_qty" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="lts_qty" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
